@@ -17,10 +17,10 @@ return new class extends Migration
             $table->id();
             $table->string('client_name');
             $table->string('client_last_name');
-            $table->string('client_dui');
+            $table->string('client_dui')->nullable();
             $table->string('description');
             $table->string('solution');
-            $table->string('phone');
+            $table->string('phone')->nullable();
             $table->foreignId('sub_categorie_id')->references('id')->on('sub_categorie')->comment('SubCategoria');
             $table->foreignId('user_id')->references('id')->on('users')->comment('Usuario');
             $table->foreignId('municipality_id')->references('id')->on('municipalities')->comment('Municipio');
