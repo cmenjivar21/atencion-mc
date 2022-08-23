@@ -54,7 +54,7 @@
                     @if (auth()->user()->can('departments') || 
                     auth()->user()->can('municipalities') || 
                     auth()->user()->can('categories') ||
-                    auth()->user()->can('sub_categories') ||
+                    auth()->user()->can('sub_categorie') ||
                     auth()->user()->can('users')
                     )
                         <li>
@@ -80,6 +80,7 @@
                                 @can( 'sub_categorie')
                                 <li><a href="{{ url('/sub_categorie') }}">Sub Categorías</a></li>
                                 @endcan
+
                                 @can( 'users')
                                 <li><a href="{{ url('/users') }}">Usuarios</a></li>
                                 @endcan
