@@ -23,7 +23,7 @@ class PermissionSeeder extends Seeder
             ['name' => 'permissions', 'guard_name' => 'web'],
             ['name' => 'roles', 'guard_name' => 'web'],
             ['name' => 'categories', 'guard_name' => 'web'],
-            ['name' => 'sub_categories', 'guard_name' => 'web'],
+            ['name' => 'sub_categorie', 'guard_name' => 'web'],
             ['name' => 'tickets', 'guard_name' => 'web'],
             ['name' => 'create-tickets', 'guard_name' => 'web'],
             ['name' => 'update-tickets', 'guard_name' => 'web'],

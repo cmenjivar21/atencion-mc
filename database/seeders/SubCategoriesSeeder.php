@@ -46,6 +46,11 @@ class SubCategoriesSeeder extends Seeder
                 "name_sub_cat" => "Olvido de Contraseña",
                 "categorie_id" => 3,
             ],
+            [
+                "id" => 7,
+                "name_sub_cat" => "Apoyo creación LoginSV",
+                "categorie_id" => 3,
+            ],
         ]);
     }
 }

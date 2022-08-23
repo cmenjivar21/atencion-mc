@@ -68,7 +68,7 @@ class UserSeeder extends Seeder
             'create-tickets',
             'update-tickets',
             'municipalities',
-            'sub_categories',
+            'sub_categorie',
         ];
 
         foreach ($userPermissions as $permission) {

@@ -19,17 +19,17 @@ class CategoriesSeeder extends Seeder
             [
                 "id" => 1,
                 "name_cat" => "Atención al Cliente",
-                
+
             ],
             [
                 "id" => 2,
                 "name_cat" => "Perfil de RENTCA",
-                
+
             ],
             [
                 "id" => 3,
                 "name_cat" => "Usuario / Contraseña",
-                
+
             ],
         ]);
     }
