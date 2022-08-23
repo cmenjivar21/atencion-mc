@@ -39,7 +39,7 @@ Route::group(['middleware' => ['auth', 'verified', 'log', 'throttle:web']], func
     Route::resource('/api/department', DepartmentController::class)->middleware('permission:departments');
     Route::resource('/api/municipality', MunicipalityController::class)->middleware('permission:municipalities');
     Route::resource('/api/categorie', CategorieController::class)->middleware('permission:categories');
-    Route::resource('/api/sub_categorie', SubCategorieController::class)->middleware('permission:sub_categories');;
+    Route::resource('/api/sub_categorie', SubCategorieController::class)->middleware('permission:sub_categorie');;
     Route::resource('/api/ticket', TicketController::class)->middleware('permission:tickets');;
     Route::resource('/api/user', UserController::class)->middleware('permission:users');
     Route::resource('/api/role', RoleController::class)->middleware('permission:roles');
