@@ -623,7 +623,20 @@ export default {
       this.dialog = true;
       this.editedIndex = -1;
       this.selectedTab = 0;
-      this.editedItem = this.defaultItem;
+      this.editedItem = {
+        client_name: "",
+        client_last_name: "",
+        client_dui: "",
+        description: "",
+        solution: "",
+        phone: "",
+        name_sub_cat: "",
+        municipality_name: "",
+        name: "",
+        finished: "",
+        date: "",
+        time: "",
+      };
       this.editedItem.date = moment().format("YYYY-MM-DD");
       //console.log(this.editedItem.date);
       this.editedItem.time = moment().format("HH:mm");
