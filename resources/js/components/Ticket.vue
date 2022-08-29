@@ -431,7 +431,7 @@ export default {
     },
   },
 
-  created() {
+  mounted() {
     this.initialize();
   },
 
@@ -441,6 +441,7 @@ export default {
       this.$v.$reset();
       this.records = [];
       this.recordsFiltered = [];
+      this.editedItem = this.defaultItem;
 
       let requests = [
         this.getDataFromApi(),
@@ -622,10 +623,11 @@ export default {
       this.dialog = true;
       this.editedIndex = -1;
       this.selectedTab = 0;
-      this.editedItem = Object.assign({}, this.defaultItem);
+      this.editedItem = this.defaultItem;
       this.editedItem.date = moment().format("YYYY-MM-DD");
-      console.log(this.editedItem.date);
+      //console.log(this.editedItem.date);
       this.editedItem.time = moment().format("HH:mm");
+      this.editedItem.client_dui = "";
       this.$v.$reset();
     },
 
