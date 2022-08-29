@@ -57,7 +57,7 @@ class Ticket extends Model
             'user_id' => $this->user_id,
             'user_name' => $this->user->name,
             'municipality_name' => $this->municipality->municipality_name,
-            'name_sub_cat' => $this->subCategorie->name_sub_cat,
+            'name_sub_cat' => $this->subCategorie?->name_sub_cat,
             'finished' => $this->finished,
             'finished_letters' => $this->finished ? 'Finalizado' : 'Pendiente',
             'date' => date("Y-m-d", strtotime($this->created_at)),
