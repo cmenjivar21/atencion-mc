@@ -105,9 +105,9 @@ class TicketController extends Controller
         $ticket->description = $request->description;
         $ticket->solution = $request->solution;
         $ticket->phone = $request->phone;
-        $ticket->sub_categorie_id = SubCategorie::where('id', $request->id)->first()->id;
+        $ticket->sub_categorie_id = SubCategorie::where('name_sub_cat', $request->name_sub_cat)->first()->id;
         $ticket->user_id = $request->user()->id; //User::where('id', $request->id)->first()->id;  //User::where('name', $request->name)->first()->id; 
-        $ticket->municipality_id = Municipality::where('id', $request->id)->first()->id;
+        $ticket->municipality_id = Municipality::where('municipality_name', $request->municipality_name)->first()->id;
         $ticket->finished = $request->finished;
         $ticket->deleted_at = $request->deleted_at;
 
@@ -131,6 +131,7 @@ class TicketController extends Controller
         $data = isset($request->selected) ? $request->selected : [];
 
         if (count($data) > 0) {
+            $id = 0;
             foreach ($data as $item) {
                 $item = json_decode($item);
 
