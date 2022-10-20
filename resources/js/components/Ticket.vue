@@ -50,9 +50,10 @@
         :items="recordsFiltered"
         :options.sync="options"
         :loading="loading"
+        :server-items-length="total"
         item-key="id"
         sort-by="id"
-        :footer-props="{ 'items-per-page-options': [15, 30, 50, 100] }"
+        :footer-props="{ 'items-per-page-options': [3, 15, 30, 50, 100] }"
       >
         <template v-slot:[`item.actions`]="{ item }">
           <v-icon small class="mr-2" @click="editItem(item)">
